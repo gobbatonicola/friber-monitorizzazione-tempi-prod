@@ -1,0 +1,44 @@
+{
+  "name": "Tempi Friber, reparto finitura",
+  "short_name": "Tempi Friber",
+  "description": "Misura dei tempi delle lavorazioni post-colatura per ODP e postazione",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#dfe3e0",
+  "theme_color": "#2e3439",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Elenco ODP", "url": "./#/odp", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Area supervisore", "url": "./#/admin", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "share_target": {
+    "action": "./condividi",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "files": [
+        {
+          "name": "file",
+          "accept": [
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "application/vnd.ms-excel",
+            "text/csv",
+            "application/json",
+            "application/gzip",
+            "application/x-gzip",
+            ".xlsx", ".xls", ".csv", ".json", ".gz"
+          ]
+        }
+      ]
+    }
+  }
+}
